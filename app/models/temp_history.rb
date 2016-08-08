@@ -1,6 +1,6 @@
 require 'httparty'
 
-class TempHistory < ActiveRecord::Base
+class TempHistory
   def initialize(zip)
     @response = HTTParty.get("http://api.wunderground.com/api/#{ENV["WUNDERGROUND_KEY"]}/forecast/history_#{year}#{month}#{day}/q/#{zip}.json")
   end

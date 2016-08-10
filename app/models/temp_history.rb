@@ -5,6 +5,9 @@ class TempHistory
     @response = HTTParty.get("http://api.wunderground.com/api/#{ENV["WUNDERGROUND_KEY"]}/forecast/history_#{year}#{month}#{day}/q/#{zip}.json")
   end
 
+# This method allows the app to catch invalid zip codes without making
+# a different call to another API to check the zip by utilizing the same API
+# used for all the other temperature calls.
   def errors?
     if @response["response"]["error"]
       return true

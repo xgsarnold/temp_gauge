@@ -3,7 +3,7 @@
 <h1>Temperature Averager</h1>
   <p>Select two dates from the drop down calendars below and enter a zip code to receive the average temperature for your area.</p>
 
-<%= form_tag({:controller => "temp_search", :action => "average"}, :method=>'get') do %>
+<%= form_tag({:controller => "temp_average", :action => "result"}, :method=>'get') do %>
   <div>
     <%= label_tag "Begin Date" %>
     <%= date_select(:temp_history, :begin_date, start_year: 2000, end_year: Date.today.year) %>

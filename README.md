@@ -1,4 +1,4 @@
-== TEMP GAUGE
+#TEMP GAUGE
 
 Temp Gauge is an app where users can simply input two dates and zip code to receive an average high, low, and mean temperature for that area between the two dates.
 

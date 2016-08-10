@@ -6,6 +6,9 @@ class TempAverageController < ApplicationController
     daily_average = []
     high_average = []
     low_average = []
+
+    # The zip code number field intentionally doesn't allow 9 digit codes
+    # in order to simplify protecting against invalid characters and zip codes.
     @zip = params[:zip]
     @begin_date = Date.new(params[:temp_history]["begin_date(1i)"].to_i, params[:temp_history]["begin_date(2i)"].to_i, params[:temp_history]["begin_date(3i)"].to_i)
     @end_date = Date.new(params[:temp_history]["end_date(1i)"].to_i, params[:temp_history]["end_date(2i)"].to_i, params[:temp_history]["end_date(3i)"].to_i)

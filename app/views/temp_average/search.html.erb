@@ -1,2 +1,22 @@
-<h1>TempAverage#search</h1>
-<p>Find me in app/views/temp_average/search.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<h1>Temperature Averager</h1>
+  <p>Select two dates from the drop down calendars below and enter a zip code to receive the average temperature for your area.</p>
+
+<%= form_tag({:controller => "temp_search", :action => "average"}, :method=>'get') do %>
+  <div>
+    <%= label_tag "Begin Date" %>
+    <%= date_select(:temp_history, :begin_date, start_year: 2000, end_year: Date.today.year) %>
+  </div>
+  <div>
+    <%= label_tag "End Date" %>
+    <%= date_select(:temp_history, :end_date, start_year: 2000, end_year: Date.today.year) %>
+  </div>
+  <div>
+    <%= label_tag "Zip Code" %>
+    <%= number_field_tag :zip, nil %>
+  </div>
+  <div>
+    <%= submit_tag 'Submit' %>
+  </div>
+<% end %>

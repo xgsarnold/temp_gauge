@@ -1,0 +1,2 @@
+module TempAverageHelper
+end

@@ -22,8 +22,4 @@ class TempHistory
   def mean_temp
     @response["history"]["dailysummary"][0]["meantempi"]
   end
-
-  def string_temp
-    @response["history"]["dailysummary"][0]["meantempi"]
-  end
 end

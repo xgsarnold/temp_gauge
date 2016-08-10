@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'temp_average/search'
+
+  get 'temp_average/result'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

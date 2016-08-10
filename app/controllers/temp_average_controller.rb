@@ -25,8 +25,8 @@ class TempAverageController < ApplicationController
         return
       end
     end
-    @average_temp = daily_average.reduce(:+)/daily_average.length
-    @high = high_average.reduce(:+)/high_average.length
-    @low = low_average.reduce(:+)/low_average.length
+    @average_temp = (daily_average.reduce(:+)/daily_average.length).round(1)
+    @high = (high_average.reduce(:+)/high_average.length).round(1)
+    @low = (low_average.reduce(:+)/low_average.length).round(1)
   end
 end
